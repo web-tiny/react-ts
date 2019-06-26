@@ -1,20 +1,20 @@
+import { DatePicker, LocaleProvider } from 'antd';
+import 'antd/dist/antd.css';
+import zhCN from 'antd/es/locale-provider/zh_CN';
+import * as moment from 'moment';
+import 'moment/locale/zh-cn';
 import * as React from 'react';
 import './App.css';
 
-import logo from './logo.svg';
-
+moment.locale('zh-cn');
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <LocaleProvider locale={zhCN}>
+        <div className="App">
+          <DatePicker />
+        </div>
+      </LocaleProvider>
     );
   }
 }
