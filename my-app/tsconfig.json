@@ -17,6 +17,7 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
+    "experimentalDecorators": true,
     "noUnusedLocals": true
   },
   "exclude": [
@@ -27,5 +28,12 @@
     "webpack",
     "jest",
     "src/setupTests.ts"
+  ],
+  "rules": {
+    "no-angle-bracket-type-assertion": true
+  },
+  "include": [
+    "./src**/*",
+    "./index.d.ts"
   ]
 }
